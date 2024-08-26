@@ -1,0 +1,31 @@
+<div class="chat_window">
+    <div class="top_menu">
+      <div class="buttons">
+        <div class="button close"></div>
+        <div class="button minimize"></div>
+        <div class="button maximize"></div>
+      </div>
+      <div class="title">
+        <img src="../../../../public/whatsapp.png" alt="logo-whatsapp">
+        WhatsApp
+      </div>
+    </div>
+    <ul class="messages">
+      <li class="message right" *ngFor="let message of chat_messages"
+      [ngClass]="{'left':message.message_side === 'receiver','right':message.message_side === 'sender'}"> 
+        <div class="avatar"></div>
+        <div class="text_wrapper">
+          <div class="text">{{message.message}}</div>
+        </div>
+      </li>
+    </ul>
+    <div class="bottom_wrapper clearfix">
+      <div class="message_input_wrapper">
+        <input [(ngModel)]="message" class="message_input" placeholder="Message..." />
+      </div>
+      <div (click)="sendMessage()" class="send_message">
+        <div class="icon"></div>
+        <div class="text">Send</div>
+      </div>
+    </div>
+  </div>

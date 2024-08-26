@@ -1,0 +1,9 @@
+./chat-frontend/node_modules
+./chat-frontend/.vscode
+./chat-frontend/.angular
+./chat-frontend/.editorconfig
+
+./chat-backend/.idea
+./chat-backend/.mvn
+./chat-backend/mvnw
+./chat-backend/mvnw.cmd
